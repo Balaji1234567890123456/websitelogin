@@ -1,2 +1,2 @@
-GET http://localhost:3003/userDetails
-Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJhbHUiLCJpYXQiOjE3MjM0NTAwNjF9.j5insyGnfKNZ3s-jei5kmYl1HZeKAw4IhBPcGg20Gow
+GET http://localhost:3005/userDetails
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJhbHUiLCJpYXQiOjE3MjM0NjgyNDl9.Rda0yg0ew222BO-QUhws_3GomHngoSALDtnQ0nc9sxs

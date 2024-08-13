@@ -20,19 +20,21 @@ class Registration extends Component{
     const {userName,userPassword,userEmail}=this.state
 
     const a={userName:userName,email:userEmail,password:userPassword}
-    const b="http://localhost:3003/register"
+    const b="http://localhost:3005/userDetails"
     const c={
       method:"POST",
       headers:{
         "Content-Type":"application/json",
-        Accept:"application/json"
-        
+        Accept:"application/json",
+
       },
       body:JSON.stringify(a)
+    
     }
     const e=await fetch (b,c)
     if (e.ok){
       const y=await e.json()
+      
       console.log(y)
 
     }

@@ -7,6 +7,7 @@ const jwt=require("jsonwebtoken")
 const path=require("path")
 const dbPath=path.join(__dirname,"userDetails.db")
 const cors=require("cors")
+
 app.use(cors())
 app.use(express.json())
 let db
@@ -15,7 +16,7 @@ const initialization=async()=>{
     db= await open({filename:dbPath,
         driver:sqlite3.Database
     })
-    app.listen(3003,()=>{
+    app.listen(3005,()=>{
         console.log("success")
     })
 }
