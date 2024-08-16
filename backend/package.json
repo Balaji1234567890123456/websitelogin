@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "proxy":"http://127.0.0.1:3005",
+  "proxy":"http://127.0.0.1:3001",
   "author": "\"balaji\"",
   "license": "ISC",
   "dependencies": {
