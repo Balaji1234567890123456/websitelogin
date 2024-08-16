@@ -9,6 +9,7 @@ const dbPath=path.join(__dirname,"userDetails.db")
 const cors=require("cors")
 
 app.use(cors())
+app.use(cors({origin:"http://localhost:3001"}))
 app.use(express.json())
 let db
 const initialization=async()=>{
@@ -16,7 +17,7 @@ const initialization=async()=>{
     db= await open({filename:dbPath,
         driver:sqlite3.Database
     })
-    app.listen(3005,()=>{
+    app.listen(3000,()=>{
         console.log("success")
     })
 }
@@ -54,7 +55,7 @@ const authentication=(request,response,next)=>{
         }
     }
 }
-app.get("/userDetails", authentication, async (request,response)=>{
+app.get("/userDetails", async (request,response)=>{
     const a=`select *
     from userDetails;`
     const b=await db.all(a)
