@@ -20,7 +20,7 @@ class Registration extends Component{
     const {userName,userPassword,userEmail}=this.state
 
     const a={userName:userName,email:userEmail,password:userPassword}
-    const b="http://localhost:3001/register"
+    const b="http://localhost:3000/register"
     const c={
       method:"POST",
       headers:{
@@ -47,11 +47,11 @@ class Registration extends Component{
       <div style={{backgroundColor:"blue",height:"100vh",display:"flex",justifyContent:"center",alignItems:"center"}}>
         <div style={{backgroundColor:"white",borderRadius:"20px",padding:"10px",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
           <form style={{display:"flex",flexDirection:"column",alignItems:"center"}} onSubmit={this.onClickSubmit}>
-            <label for="username" style={{alignSelf:"flex-start"}}>user name</label>
+            <label htmlFor="username" style={{alignSelf:"flex-start"}}>user name</label>
             <input id="username" type="text" onChange={this.onChangeUserName} value={userName}/>
-            <label for="useremail" style={{alignSelf:"flex-start"}}>user email</label>
+            <label htmlFor="useremail" style={{alignSelf:"flex-start"}}>user email</label>
             <input id="useremail" type="text" onChange={this.onChangeEmail} value={userEmail}/>
-            <label for="userpassword" style={{alignSelf:"flex-start"}}>user password</label>
+            <label htmlFor="userpassword" style={{alignSelf:"flex-start"}}>user password</label>
             <input id="userpassword" type="password" onChange={this.onChangeUserPassword} value={userPassword}/>
             <button type="submit" style={{margin:"10px"}}>Register</button>
 
